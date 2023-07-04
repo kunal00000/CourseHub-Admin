@@ -42,7 +42,7 @@ const Landing = () => {
                 </Button>
               </a>
               <a href="/register">
-                <Button variant="default">Book a demo</Button>
+                <Button variant="light">Book a demo</Button>
               </a>
             </Group>
           </div>
