@@ -13,8 +13,11 @@
     "@emotion/react": "^11.11.1",
     "@mantine/core": "^6.0.15",
     "@mantine/hooks": "^6.0.15",
+    "@tabler/icons-react": "^2.23.0",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
