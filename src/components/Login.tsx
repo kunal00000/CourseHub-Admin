@@ -25,6 +25,7 @@ function Login() {
         navigate("/courses");
       }
     } catch (err: any) {
+      console.log(err);
       ErrorNotification(err.response.data.message);
     }
   }

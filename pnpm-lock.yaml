@@ -4,6 +4,7 @@ specifiers:
   '@emotion/react': ^11.11.1
   '@mantine/core': ^6.0.15
   '@mantine/hooks': ^6.0.15
+  '@mantine/modals': ^6.0.16
   '@mantine/notifications': ^6.0.16
   '@tabler/icons-react': ^2.23.0
   '@types/react': ^18.0.37
@@ -29,6 +30,7 @@ dependencies:
   '@emotion/react': 11.11.1_i73ekzlbntu7jol6ph2fvy4mga
   '@mantine/core': 6.0.16_lnj3546omx7ofcu37a37b23qjq
   '@mantine/hooks': 6.0.16_react@18.2.0
+  '@mantine/modals': 6.0.16_uu56mwkfrreagak2ehv7jpizdy
   '@mantine/notifications': 6.0.16_uu56mwkfrreagak2ehv7jpizdy
   '@tabler/icons-react': 2.23.0_react@18.2.0
   axios: 1.4.0
@@ -732,6 +734,21 @@ packages:
       react: '>=16.8.0'
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@mantine/modals/6.0.16_uu56mwkfrreagak2ehv7jpizdy:
+    resolution: {integrity: sha512-RMDp5jZTrbXgMJN3aPBt82LsIL91xepQDq/zmtLnj2JJnDYTKZarvpOJPvUO/Ewyr6GYJ3iNbcXkV0w0CqCNGg==}
+    peerDependencies:
+      '@mantine/core': 6.0.16
+      '@mantine/hooks': 6.0.16
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@mantine/core': 6.0.16_lnj3546omx7ofcu37a37b23qjq
+      '@mantine/hooks': 6.0.16_react@18.2.0
+      '@mantine/utils': 6.0.16_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@mantine/notifications/6.0.16_uu56mwkfrreagak2ehv7jpizdy:
