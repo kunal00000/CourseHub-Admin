@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button, Text, Input, PasswordInput, Group, Card } from "@mantine/core";
 import { IconLock, IconAt } from "@tabler/icons-react";
-import { postSignup } from "../services/auth";
+import { postSignup } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
-import { ErrorNotification } from "../utils/notification";
+import { ErrorNotification } from "../../utils/notification";
 
 // File is incomplete. You need to add input boxes to take input for users to register.
 function Register() {

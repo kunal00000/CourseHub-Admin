@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/utilComponents/Login";
 import Landing from "./components/Landing";
-import CreateCourse from "./components/CreateCourse";
-import Register from "./components/Register";
+import CreateCourse from "./components/course/CreateCourse";
+import Register from "./components/utilComponents/Register";
 import ShowCourses from "./components/ShowCourses";
 
 // This file shows how you can do routing in React.
