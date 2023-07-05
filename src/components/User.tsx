@@ -12,7 +12,7 @@ import {
   rem,
   ThemeIcon,
 } from "@mantine/core";
-import { logoutModal } from "../components/LogoutModal";
+import { logoutModal } from "./utilComponents/LogoutModal";
 
 export function User({ username }: { username: string }) {
   const theme = useMantineTheme();
