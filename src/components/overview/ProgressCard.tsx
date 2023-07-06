@@ -14,7 +14,7 @@ import { IconCertificate } from "@tabler/icons-react";
 export const ProgressCard = ({ courses }: { courses: Course[] }) => {
   const publishedCourses = courses.filter((course) => course.published);
   return (
-    <Card p={"md"} m={"md"} w={350} h={300} shadow="md">
+    <Card p={"md"} w={350} h={300} shadow="md">
       <RingProgress
         size={150}
         thickness={16}

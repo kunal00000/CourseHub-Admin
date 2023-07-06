@@ -1,4 +1,4 @@
-import { SimpleGrid, Text, Image, Flex } from "@mantine/core";
+import { SimpleGrid, Text, Stack, Flex } from "@mantine/core";
 import CourseCardCompact from "../course/CourseCardCompact";
 import { ProgressCard } from "./ProgressCard";
 import { Link } from "react-router-dom";
@@ -63,24 +63,29 @@ const Overview = () => {
       <Text size={"xl"} m={"xl"} weight={"bolder"}>
         Overview
       </Text>
-
-      <Image m={"xl"} h={200} fit="contain" withPlaceholder src={null} />
-      <Text size={"xl"} weight={"bold"} mt={"2rem"} ml={"1.8rem"} mb={"1rem"}>
-        My Courses
-      </Text>
-      <Flex>
-        <SimpleGrid w={"45vw"} cols={1} mx={"xl"}>
-          {courses.length > 0
-            ? courses.map((course) => {
-                return (
-                  <Link key={course.id} to={`?id=${course.id}`}>
-                    <CourseCardCompact course={course} />
-                  </Link>
-                );
-              })
-            : ""}
-        </SimpleGrid>
-        <ProgressCard courses={courses} />
+      <Flex m={"xl"}>
+        <Stack w={"35vw"} m={"xl"}>
+          <Text size={"xl"} weight={"bold"}>
+            My Courses
+          </Text>
+          <SimpleGrid cols={1}>
+            {courses.length > 0
+              ? courses.map((course) => {
+                  return (
+                    <Link key={course.id} to={`?id=${course.id}`}>
+                      <CourseCardCompact course={course} />
+                    </Link>
+                  );
+                })
+              : ""}
+          </SimpleGrid>
+        </Stack>
+        <Stack w={"35vw"} m={"xl"}>
+          <Text size={"xl"} weight={"bold"}>
+            Progress
+          </Text>
+          <ProgressCard courses={courses} />
+        </Stack>
       </Flex>
     </div>
   );
