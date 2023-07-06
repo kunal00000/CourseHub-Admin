@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Text, Input, PasswordInput, Group, Card } from "@mantine/core";
 import { IconLock, IconAt } from "@tabler/icons-react";
 import { postLogin } from "../../services/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ErrorNotification } from "../../utils/notification";
 
 /// File is incomplete. You need to add input boxes to take input for users to login.
@@ -63,11 +63,11 @@ function Login() {
       <Group>
         <Text size={"sm"} className="ml-auto">
           New here?{" "}
-          <a href="/register">
+          <Link to="/register">
             <Button variant="light" compact>
               Register
             </Button>
-          </a>
+          </Link>
         </Text>
       </Group>
     </Card>

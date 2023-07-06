@@ -2,6 +2,7 @@
 /// Maybe also check from the backend if the user is already logged in and then show them a logout button
 /// Logging a user out is as simple as deleting the token from the local storage.
 import { Button, Group, Text, Image, Center } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -10,16 +11,16 @@ const Landing = () => {
         <Group position="apart" className="m-10 mx-24">
           <Text className="text-3xl font-bold">CourseHub</Text>
           <Group>
-            <a href="/login">
+            <Link to="/login">
               <Button variant="subtle" color="cyan">
                 Login
               </Button>
-            </a>
-            <a href="/register">
+            </Link>
+            <Link to="/register">
               <Button variant="outline" color="cyan">
                 Start for free
               </Button>
-            </a>
+            </Link>
           </Group>
         </Group>
       </nav>
@@ -36,14 +37,14 @@ const Landing = () => {
               your own app — all using just CourseHub.
             </Text>
             <Group className="" spacing="sm">
-              <a href="/register">
+              <Link to="/register">
                 <Button variant="outline" color="teal">
                   Start for free
                 </Button>
-              </a>
-              <a href="/register">
+              </Link>
+              <Link to="/register">
                 <Button variant="light">Book a demo</Button>
-              </a>
+              </Link>
             </Group>
           </div>
           <div>
