@@ -41,7 +41,7 @@ function Dashboard() {
               <Link to={"/dashboard/create"}>
                 <Redirect
                   icon={<IconSquareRoundedPlus />}
-                  color={"dark"}
+                  color={"lime"}
                   label={"Create Course"}
                 />
               </Link>

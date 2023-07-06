@@ -94,7 +94,7 @@ function CourseDashboard() {
               <Link to={"/dashboard/create"}>
                 <Redirect
                   icon={<IconSquareRoundedPlus />}
-                  color={"dark"}
+                  color={"lime"}
                   label={"Create Course"}
                 />
               </Link>
@@ -128,9 +128,7 @@ const CoursePage = () => {
       </Text>
       <SimpleGrid m={"xl"} cols={3}>
         {courses.map((course) => (
-          <Link key={course.id} to={`?id=${course.id}`}>
-            <CourseCard course={course} />
-          </Link>
+          <CourseCard key={course.id} course={course} />
         ))}
       </SimpleGrid>
     </>
