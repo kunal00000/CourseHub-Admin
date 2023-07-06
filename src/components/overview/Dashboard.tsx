@@ -8,7 +8,6 @@ import { IconSquareRoundedPlus } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
 function Dashboard() {
-  // const [courses, setCourses] = useState([]);
   const [username, setUsername] = useState("");
 
   const { data } = useUser();

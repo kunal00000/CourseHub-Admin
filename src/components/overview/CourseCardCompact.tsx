@@ -1,4 +1,4 @@
-import { Badge, Group, Notification, Text } from "@mantine/core";
+import { Badge, Group, Notification } from "@mantine/core";
 import { Course } from "../../types/course";
 
 const CourseCardCompact = ({ course }: { course: Course }) => {
@@ -26,7 +26,12 @@ const CourseCardCompact = ({ course }: { course: Course }) => {
       withCloseButton={false}
     >
       <Group>
-        <Text>{course.description}</Text>
+        {course.published ? (
+          <Badge color="blue">Published</Badge>
+        ) : (
+          <Badge color="red">Not Published</Badge>
+        )}
+
         <Badge color="yellow">{course.price}$</Badge>
       </Group>
     </Notification>

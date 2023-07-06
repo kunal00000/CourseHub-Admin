@@ -1,4 +1,3 @@
-// import { Course } from "../../types/course";
 import { AppShell, Navbar, Text, SimpleGrid } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { MainLinks, Redirect } from "../utilComponents/Redirect";
@@ -7,61 +6,62 @@ import { useUser } from "../../hooks/useUser";
 import CourseCard from "./CourseCard";
 import { Link } from "react-router-dom";
 import { IconSquareRoundedPlus } from "@tabler/icons-react";
+import { useCourses } from "../../hooks/useCourse";
+import { Course } from "../../types/course";
 
-const courses = [
-  {
-    id: "1",
-    title: "TikTok Dance Moves Masterclass",
-    description: "Unlock your potential to become a viral TikTok dancer.",
-    imageLink: "https://example.com/tiktokdancemoves.jpg",
-    price: 25,
-    published: true,
-    updatedAt: "2023-06-15",
-  },
-  {
-    id: "2",
-    title: "How to loose all your money in stock market",
-    description:
-      "Learn how to loose all your money in the stock market in 5 easy steps.",
-    imageLink: "https://example.com/coffee-fuel.jpg",
-    price: 40,
-    published: false,
-    updatedAt: "2023-06-15",
-  },
-  {
-    id: "3",
-    title: "Procrastination Techniques for Engineers",
-    description:
-      "Learn advanced techniques to delay tasks until the last possible moment while still meeting deadlines.",
-    imageLink: "https://example.com/procrastination.jpg",
-    price: 90,
-    published: true,
-    updatedAt: "2023-06-15",
-  },
-  {
-    id: "4",
-    title: "The Art of Stack Overflow: Finding Answers to All Your Problems",
-    description:
-      "Master the skill of searching and copy-pasting code snippets from Stack Overflow.",
-    imageLink: "https://example.com/stackoverflow-art.jpg",
-    price: 70,
-    published: false,
-    updatedAt: "2023-06-15",
-  },
-  {
-    id: "5",
-    title: "Meetings: How to Look Engaged While Actually Thinking About Code",
-    description:
-      "Learn the art of nodding and smiling during meetings while your mind is deep in code logic.",
-    imageLink: "https://example.com/meetings-code.jpg",
-    price: 50,
-    published: true,
-    updatedAt: "2023-06-15",
-  },
-];
+// const courses = [
+//   {
+//     id: "1",
+//     title: "TikTok Dance Moves Masterclass",
+//     description: "Unlock your potential to become a viral TikTok dancer.",
+//     imageLink: "https://example.com/tiktokdancemoves.jpg",
+//     price: 25,
+//     published: true,
+//     updatedAt: "2023-06-15",
+//   },
+//   {
+//     id: "2",
+//     title: "How to loose all your money in stock market",
+//     description:
+//       "Learn how to loose all your money in the stock market in 5 easy steps.",
+//     imageLink: "https://example.com/coffee-fuel.jpg",
+//     price: 40,
+//     published: false,
+//     updatedAt: "2023-06-15",
+//   },
+//   {
+//     id: "3",
+//     title: "Procrastination Techniques for Engineers",
+//     description:
+//       "Learn advanced techniques to delay tasks until the last possible moment while still meeting deadlines.",
+//     imageLink: "https://example.com/procrastination.jpg",
+//     price: 90,
+//     published: true,
+//     updatedAt: "2023-06-15",
+//   },
+//   {
+//     id: "4",
+//     title: "The Art of Stack Overflow: Finding Answers to All Your Problems",
+//     description:
+//       "Master the skill of searching and copy-pasting code snippets from Stack Overflow.",
+//     imageLink: "https://example.com/stackoverflow-art.jpg",
+//     price: 70,
+//     published: false,
+//     updatedAt: "2023-06-15",
+//   },
+//   {
+//     id: "5",
+//     title: "Meetings: How to Look Engaged While Actually Thinking About Code",
+//     description:
+//       "Learn the art of nodding and smiling during meetings while your mind is deep in code logic.",
+//     imageLink: "https://example.com/meetings-code.jpg",
+//     price: 50,
+//     published: true,
+//     updatedAt: "2023-06-15",
+//   },
+// ];
 
 function CourseDashboard() {
-  // const [courses, setCourses] = useState([]);
   const [username, setUsername] = useState("");
 
   const { data } = useUser();
@@ -120,15 +120,27 @@ function CourseDashboard() {
 }
 
 const CoursePage = () => {
-  // const CourseDashboard = ({ courses }: { courses: Course[] }) => {
+  const [courses, setCourses] = useState<Course[]>([]);
+  const { data, isLoading } = useCourses();
+
+  useEffect(() => {
+    if (!isLoading && data.courses.length > 0) {
+      setCourses(data.courses);
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Text size={"xl"} m={"xl"} weight={"bolder"}>
         Courses
       </Text>
       <SimpleGrid m={"xl"} cols={3}>
-        {courses.map((course) => (
-          <CourseCard key={course.id} course={course} />
+        {courses.map((course, idx) => (
+          <CourseCard key={idx} course={course} />
         ))}
       </SimpleGrid>
     </>
