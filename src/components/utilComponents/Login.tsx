@@ -22,7 +22,7 @@ function Login() {
     try {
       const loginResponse = await postLogin(email, password);
       if (loginResponse.message === "Logged in successfully") {
-        navigate("/courses");
+        navigate("/dashboard");
       }
     } catch (err: any) {
       console.log(err);

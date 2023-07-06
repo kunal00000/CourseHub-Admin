@@ -22,7 +22,7 @@ function Register() {
     try {
       const signupResponse = await postSignup(email, password);
       if (signupResponse.message === "Admin created successfully") {
-        navigate("/courses");
+        navigate("/dashboard");
       }
     } catch (err: any) {
       console.log(err);

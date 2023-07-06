@@ -11,7 +11,7 @@ const CourseDashboard = ({ courses }: { courses: Course[] }) => {
       </Text>
       <SimpleGrid m={"xl"} cols={3}>
         {courses.map((course) => (
-          <Link to={`${course.id}`}>
+          <Link to={`?id=${course.id}`}>
             <CourseCard key={course.id} course={course} />
           </Link>
         ))}

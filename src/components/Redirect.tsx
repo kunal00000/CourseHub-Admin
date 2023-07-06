@@ -5,6 +5,7 @@ import {
   IconCertificate,
 } from "@tabler/icons-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface RedirectProps {
   icon: React.ReactNode;
@@ -46,12 +47,20 @@ export const Redirect = ({ icon, color, label }: RedirectProps) => {
 export function MainLinks() {
   return (
     <div>
-      <Redirect
-        icon={<IconBrandGooglePodcasts />}
-        color={"orange"}
-        label={"Overview"}
-      />
-      <Redirect icon={<IconCertificate />} color={"yellow"} label={"Courses"} />
+      <Link to={"overview"}>
+        <Redirect
+          icon={<IconBrandGooglePodcasts />}
+          color={"orange"}
+          label={"Overview"}
+        />
+      </Link>
+      <Link to={"courses"}>
+        <Redirect
+          icon={<IconCertificate />}
+          color={"yellow"}
+          label={"Courses"}
+        />
+      </Link>
       <Redirect
         icon={<IconBrandGoogleAnalytics />}
         color={"lime"}
