@@ -47,14 +47,14 @@ export const Redirect = ({ icon, color, label }: RedirectProps) => {
 export function MainLinks() {
   return (
     <div>
-      <Link to={"overview"}>
+      <Link to={"/dashboard"}>
         <Redirect
           icon={<IconBrandGooglePodcasts />}
           color={"orange"}
           label={"Overview"}
         />
       </Link>
-      <Link to={"courses"}>
+      <Link to={"/dashboard/courses"}>
         <Redirect
           icon={<IconCertificate />}
           color={"yellow"}

@@ -60,7 +60,7 @@ export const ProgressCard = ({ courses }: { courses: Course[] }) => {
             len: courses.length - publishedCourses.length,
           },
         ].map((item) => (
-          <UnstyledButton>
+          <UnstyledButton key={item.color}>
             <Group spacing={"xs"}>
               <Badge
                 color={item.color}

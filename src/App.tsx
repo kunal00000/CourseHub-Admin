@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import CreateCourse from "./components/course/CreateCourse";
 import Register from "./components/utilComponents/Register";
 import Dashboard from "./components/Dashboard";
+import CourseDashboard from "./components/course/CourseDashboard";
 
 // This file shows how you can do routing in React.
 // Try going to /login, /register, /about, /courses on the website and see how the html changes
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<CreateCourse />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/courses" element={<CourseDashboard />} />
       </Routes>
     </Router>
   );
