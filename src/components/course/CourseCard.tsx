@@ -1,5 +1,7 @@
 import { Card, Image, Text, Badge, Group, Button } from "@mantine/core";
 import type { Course } from "../../types/course";
+import { IconExternalLink } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
@@ -31,13 +33,18 @@ export default function CourseCard({ course }: { course: Course }) {
       <Text size={"xs"} color="dimmed" mt={"md"}>
         {course.updatedAt}
       </Text>
-      {!course.published ? (
-        <Button variant="default" color="dark" fullWidth mt="md" radius="md">
-          Publish Now
+      <Link to={`/dashboard/edit?id=${course.id}`}>
+        <Button
+          rightIcon={<IconExternalLink />}
+          variant="default"
+          color="dark"
+          fullWidth
+          mt="md"
+          radius="md"
+        >
+          Edit Course
         </Button>
-      ) : (
-        ""
-      )}
+      </Link>
     </Card>
   );
 }
