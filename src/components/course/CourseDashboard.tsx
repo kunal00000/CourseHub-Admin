@@ -1,8 +1,8 @@
 // import { Course } from "../../types/course";
 import { AppShell, Navbar, Text, SimpleGrid } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { MainLinks, Redirect } from "../Redirect";
-import { User } from "../User";
+import { MainLinks, Redirect } from "../utilComponents/Redirect";
+import { User } from "../utilComponents/User";
 import { useUser } from "../../hooks/useUser";
 import CourseCard from "./CourseCard";
 import { Link } from "react-router-dom";

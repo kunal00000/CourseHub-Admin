@@ -1,9 +1,9 @@
 import { AppShell, Navbar, Text } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { MainLinks, Redirect } from "./Redirect";
-import { User } from "./User";
-import { useUser } from "../hooks/useUser";
-import Overview from "./overview/Overview";
+import { MainLinks, Redirect } from "../utilComponents/Redirect";
+import { User } from "../utilComponents/User";
+import { useUser } from "../../hooks/useUser";
+import Overview from "./Overview";
 import { IconSquareRoundedPlus } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 

@@ -4,7 +4,7 @@ import Login from "./components/utilComponents/Login";
 import Landing from "./components/Landing";
 import CreateCourse from "./components/course/CreateCourse";
 import Register from "./components/utilComponents/Register";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/overview/Dashboard";
 import CourseDashboard from "./components/course/CourseDashboard";
 
 // This file shows how you can do routing in React.
