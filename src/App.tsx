@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/about" element={<CreateCourse />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/create" element={<CreateCourse />} />
         <Route path="/dashboard/courses" element={<CourseDashboard />} />
       </Routes>
     </Router>

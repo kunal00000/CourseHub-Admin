@@ -60,7 +60,7 @@ const Overview = () => {
   // const Overview = ({ courses }: { courses: Course[] }) => {
   return (
     <div>
-      <Text size={"xl"} m={"xl"} weight={"bolder"}>
+      <Text size={"xl"} px={"xl"} weight={"bolder"}>
         Overview
       </Text>
       <Flex m={"xl"}>

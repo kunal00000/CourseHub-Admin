@@ -1,11 +1,12 @@
 // import { Course } from "../../types/course";
 import { AppShell, Navbar, Text, SimpleGrid } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { MainLinks } from "../Redirect";
+import { MainLinks, Redirect } from "../Redirect";
 import { User } from "../User";
 import { useUser } from "../../hooks/useUser";
 import CourseCard from "./CourseCard";
 import { Link } from "react-router-dom";
+import { IconSquareRoundedPlus } from "@tabler/icons-react";
 
 const courses = [
   {
@@ -88,6 +89,15 @@ function CourseDashboard() {
             </Navbar.Section>
             <Navbar.Section>
               <MainLinks />
+            </Navbar.Section>
+            <Navbar.Section>
+              <Link to={"/dashboard/create"}>
+                <Redirect
+                  icon={<IconSquareRoundedPlus />}
+                  color={"dark"}
+                  label={"Create Course"}
+                />
+              </Link>
             </Navbar.Section>
             <Navbar.Section m={"auto"} mb={0}>
               <User username={username} />

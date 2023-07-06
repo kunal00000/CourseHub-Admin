@@ -1,9 +1,11 @@
 import { AppShell, Navbar, Text } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { MainLinks } from "./Redirect";
+import { MainLinks, Redirect } from "./Redirect";
 import { User } from "./User";
 import { useUser } from "../hooks/useUser";
 import Overview from "./overview/Overview";
+import { IconSquareRoundedPlus } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   // const [courses, setCourses] = useState([]);
@@ -34,6 +36,15 @@ function Dashboard() {
             </Navbar.Section>
             <Navbar.Section>
               <MainLinks />
+            </Navbar.Section>
+            <Navbar.Section>
+              <Link to={"/dashboard/create"}>
+                <Redirect
+                  icon={<IconSquareRoundedPlus />}
+                  color={"dark"}
+                  label={"Create Course"}
+                />
+              </Link>
             </Navbar.Section>
             <Navbar.Section m={"auto"} mb={0}>
               <User username={username} />
