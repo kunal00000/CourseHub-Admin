@@ -6,11 +6,8 @@ import CreateCourse from "./components/course/CreateCourse";
 import Register from "./components/utilComponents/Register";
 import Dashboard from "./components/overview/Dashboard";
 import CourseDashboard from "./components/course/CourseDashboard";
+import EditCourse from "./components/course/EditCourse";
 
-// This file shows how you can do routing in React.
-// Try going to /login, /register, /about, /courses on the website and see how the html changes
-// based on the route.
-// You can also try going to /random and see what happens (a route that doesnt exist)
 function App() {
   return (
     <Router>
@@ -21,6 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/create" element={<CreateCourse />} />
         <Route path="/dashboard/courses" element={<CourseDashboard />} />
+        <Route path="/dashboard/edit/:id" element={<EditCourse />} />
       </Routes>
     </Router>
   );

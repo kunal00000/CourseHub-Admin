@@ -15,8 +15,8 @@ export async function postCourse(course: CourseForm) {
   }
 }
 
-export async function updateCourse(course: CourseForm) {
-  const response = await axiosClient.put("admin/courses", course);
+export async function updateCourse(id: string, course: CourseForm) {
+  const response = await axiosClient.put(`admin/courses/${id}`, course);
   if (response.status === 200) {
     return response.data;
   }

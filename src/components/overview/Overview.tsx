@@ -13,7 +13,7 @@ const Overview = () => {
     if (!isLoading && data.courses.length > 0) {
       setCourses(data.courses);
     }
-  }, [isLoading]);
+  }, [isLoading, data]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -31,8 +31,8 @@ const Overview = () => {
           </Text>
           <SimpleGrid cols={1}>
             {courses.length > 0
-              ? courses.map((course, idx) => {
-                  return <CourseCardCompact key={idx} course={course} />;
+              ? courses.map((course) => {
+                  return <CourseCardCompact key={course._id} course={course} />;
                 })
               : ""}
           </SimpleGrid>

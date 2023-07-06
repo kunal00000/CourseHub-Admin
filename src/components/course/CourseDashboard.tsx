@@ -127,7 +127,7 @@ const CoursePage = () => {
     if (!isLoading && data.courses.length > 0) {
       setCourses(data.courses);
     }
-  }, [isLoading]);
+  }, [isLoading, data]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -139,8 +139,8 @@ const CoursePage = () => {
         Courses
       </Text>
       <SimpleGrid m={"xl"} cols={3}>
-        {courses.map((course, idx) => (
-          <CourseCard key={idx} course={course} />
+        {courses.map((course) => (
+          <CourseCard key={course._id} course={course} />
         ))}
       </SimpleGrid>
     </>
