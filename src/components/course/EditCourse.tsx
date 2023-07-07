@@ -119,7 +119,7 @@ function EditCourse() {
               { value: "true", label: "Publish Now" },
               { value: "false", label: "Publish Later" },
             ]}
-            defaultValue={published}
+            value={published}
             p={"xs"}
             onChange={setPublished}
           />
