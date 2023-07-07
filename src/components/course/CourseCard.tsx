@@ -14,11 +14,11 @@ export default function CourseCard({ course }: { course: Course }) {
         <Text weight={500}>{course.title}</Text>
         {course.published ? (
           <Badge color="blue" variant="light">
-            Published
+            Launched
           </Badge>
         ) : (
           <Badge color="red" variant="light">
-            Unpublished
+            Not Launched
           </Badge>
         )}
         <Badge color="yellow" radius={"xs"} variant="filled">

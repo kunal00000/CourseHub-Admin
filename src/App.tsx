@@ -19,6 +19,7 @@ function App() {
         <Route path="/dashboard/create" element={<CreateCourse />} />
         <Route path="/dashboard/courses" element={<CourseDashboard />} />
         <Route path="/dashboard/edit/:id" element={<EditCourse />} />
+        <Route path="*" element={<h1>404 Not Found</h1>}></Route>
       </Routes>
     </Router>
   );

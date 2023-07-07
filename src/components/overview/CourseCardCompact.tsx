@@ -27,9 +27,9 @@ const CourseCardCompact = ({ course }: { course: Course }) => {
     >
       <Group>
         {course.published ? (
-          <Badge color="blue">Published</Badge>
+          <Badge color="blue">Launched</Badge>
         ) : (
-          <Badge color="red">Not Published</Badge>
+          <Badge color="red">Not Launched</Badge>
         )}
 
         <Badge color="yellow">{course.price}$</Badge>
