@@ -1,6 +1,11 @@
 # CourseHub-Admin
 CourseHub-Admin is an admin interface of a course selling website, where admins can add and edit their courses.
 
+__Backend for CourseHub - [CourseHub-BE](https://github.com/kunal00000/CourseHub-BE)__ <br/>
+__Admin Interface for CourseHub - [CourseHub-Admin](https://github.com/kunal00000/CourseHub-Admin)__ <br/>
+__User Interface for CourseHub - [CourseHub-User](https://github.com/kunal00000/CourseHub-User)__
+
+## Walkthrough the site
 https://github.com/kunal00000/CourseHub-Admin/assets/92316166/63f2a66b-2c86-485a-bd33-82f9b8d6da1f
 
 ## Tech Used -
