@@ -1,7 +1,4 @@
-/// This is the landing page. You need to add a link to the login page here.
-/// Maybe also check from the backend if the user is already logged in and then show them a logout button
-/// Logging a user out is as simple as deleting the token from the local storage.
-import { Button, Group, Text, Image, Center } from "@mantine/core";
+import { Button, Center, Group, Image, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
@@ -52,7 +49,9 @@ const Landing = () => {
               width={540}
               height={490}
               fit="contain"
-              src={"https://graphy.com/images/herofeature1.png"}
+              src={
+                "https://www.engagedigital.ai/sites/default/files/2021-12/radisys_cpaas_teacher_diagram_hero_v2.png"
+              }
               alt="CourseHub"
               caption="Over 100K+ creators have launched their online
               teaching businesses using CourseHub."
