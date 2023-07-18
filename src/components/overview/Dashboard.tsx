@@ -1,11 +1,12 @@
 import { AppShell, Navbar, Text } from "@mantine/core";
+import { IconSquareRoundedPlus } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import { useUser } from "../../hooks/useUser";
 import { MainLinks, Redirect } from "../utilComponents/Redirect";
 import { User } from "../utilComponents/User";
-import { useUser } from "../../hooks/useUser";
 import Overview from "./Overview";
-import { IconSquareRoundedPlus } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
 
 function Dashboard() {
   const [username, setUsername] = useState("");

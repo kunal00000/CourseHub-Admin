@@ -1,11 +1,12 @@
+import { MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
+import { Notifications } from "@mantine/notifications";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
+
 import App from "./App.tsx";
 import "./index.css";
-import { MantineProvider } from "@mantine/core";
-import { Notifications } from "@mantine/notifications";
-import { ModalsProvider } from "@mantine/modals";
-import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient();
 
@@ -23,5 +24,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         </QueryClientProvider>
       </ModalsProvider>
     </MantineProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -1,4 +1,4 @@
-import { UnstyledButton, Group, ThemeIcon, Text } from "@mantine/core";
+import { Group, Text, ThemeIcon, UnstyledButton } from "@mantine/core";
 import { IconBrandGoogleAnalytics, IconCertificate } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";

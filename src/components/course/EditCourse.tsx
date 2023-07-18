@@ -1,15 +1,16 @@
 import {
-  Card,
-  TextInput,
-  Text,
   Button,
-  NumberInput,
+  Card,
   Group,
+  NumberInput,
   Select,
+  Text,
+  TextInput,
   Textarea,
 } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+
 import { useCourseUpdateMutation, useCourses } from "../../hooks/useCourse";
 import { Course, CourseForm } from "../../types/course";
 import { ErrorNotification } from "../../utils/notification";
@@ -29,7 +30,7 @@ function EditCourse() {
   useEffect(() => {
     if (!isLoading && data.courses.length > 0) {
       const currCourse = data["courses"].find(
-        (course: Course) => course._id === id
+        (course: Course) => course._id === id,
       );
 
       if (!currCourse) {

@@ -1,8 +1,9 @@
-import { useQuery, useMutation, useQueryClient } from "react-query";
+import { useMutation, useQuery, useQueryClient } from "react-query";
+import { useNavigate } from "react-router-dom";
+
 import { getCourses, postCourse, updateCourse } from "../services/course";
 import { CourseForm } from "../types/course";
 import { SuccessNotification } from "../utils/notification";
-import { useNavigate } from "react-router-dom";
 
 export function useCourses() {
   return useQuery({

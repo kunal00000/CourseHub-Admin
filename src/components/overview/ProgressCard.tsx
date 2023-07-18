@@ -1,15 +1,16 @@
 import {
+  Badge,
   Card,
   Center,
   Group,
   RingProgress,
+  Text,
   ThemeIcon,
   UnstyledButton,
-  Text,
-  Badge,
 } from "@mantine/core";
-import { Course } from "../../types/course";
 import { IconCertificate } from "@tabler/icons-react";
+
+import { Course } from "../../types/course";
 
 export const ProgressCard = ({ courses }: { courses: Course[] }) => {
   const publishedCourses = courses.filter((course) => course.published);
@@ -34,7 +35,7 @@ export const ProgressCard = ({ courses }: { courses: Course[] }) => {
           {
             value: Math.floor(
               ((courses.length - publishedCourses.length) * 100) /
-                courses.length
+                courses.length,
             ),
             color: "lime",
             tooltip: "Unpublished Courses",

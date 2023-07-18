@@ -1,4 +1,5 @@
 import { Badge, Group, Notification } from "@mantine/core";
+
 import { Course } from "../../types/course";
 
 const CourseCardCompact = ({ course }: { course: Course }) => {

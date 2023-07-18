@@ -1,9 +1,10 @@
-import { SimpleGrid, Text, Stack, Flex } from "@mantine/core";
+import { Flex, SimpleGrid, Stack, Text } from "@mantine/core";
+import { useEffect, useState } from "react";
+
+import { useCourses } from "../../hooks/useCourse";
+import { Course } from "../../types/course";
 import CourseCardCompact from "./CourseCardCompact";
 import { ProgressCard } from "./ProgressCard";
-import { useEffect, useState } from "react";
-import { Course } from "../../types/course";
-import { useCourses } from "../../hooks/useCourse";
 
 const Overview = () => {
   const { data, isLoading } = useCourses();

@@ -1,12 +1,13 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/utilComponents/Login";
 import Landing from "./components/Landing";
-import CreateCourse from "./components/course/CreateCourse";
-import Register from "./components/utilComponents/Register";
-import Dashboard from "./components/overview/Dashboard";
 import CourseDashboard from "./components/course/CourseDashboard";
+import CreateCourse from "./components/course/CreateCourse";
 import EditCourse from "./components/course/EditCourse";
+import Dashboard from "./components/overview/Dashboard";
+import Login from "./components/utilComponents/Login";
+import Register from "./components/utilComponents/Register";
 
 function App() {
   return (

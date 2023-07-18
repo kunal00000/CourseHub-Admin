@@ -1,7 +1,8 @@
-import { Card, Image, Text, Badge, Group, Button } from "@mantine/core";
-import type { Course } from "../../types/course";
+import { Badge, Button, Card, Group, Image, Text } from "@mantine/core";
 import { IconExternalLink } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+
+import type { Course } from "../../types/course";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (

@@ -25,7 +25,7 @@ export const postLogin = async (email: string, password: string) => {
         username: email,
         password: password,
       },
-    }
+    },
   );
   if (data.message === "Logged in successfully") {
     console.log("login success");

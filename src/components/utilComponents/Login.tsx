@@ -1,8 +1,9 @@
+import { Button, Card, Group, Input, PasswordInput, Text } from "@mantine/core";
+import { IconAt, IconLock } from "@tabler/icons-react";
 import { useState } from "react";
-import { Button, Text, Input, PasswordInput, Group, Card } from "@mantine/core";
-import { IconLock, IconAt } from "@tabler/icons-react";
-import { postLogin } from "../../services/auth";
 import { Link, useNavigate } from "react-router-dom";
+
+import { postLogin } from "../../services/auth";
 import { ErrorNotification } from "../../utils/notification";
 
 /// File is incomplete. You need to add input boxes to take input for users to login.

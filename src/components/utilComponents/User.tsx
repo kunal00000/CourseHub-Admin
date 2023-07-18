@@ -1,17 +1,18 @@
 import {
-  IconChevronRight,
-  IconChevronLeft,
-  IconUserCircle,
-} from "@tabler/icons-react";
-import {
-  UnstyledButton,
+  Box,
   Group,
   Text,
-  Box,
-  useMantineTheme,
-  rem,
   ThemeIcon,
+  UnstyledButton,
+  rem,
+  useMantineTheme,
 } from "@mantine/core";
+import {
+  IconChevronLeft,
+  IconChevronRight,
+  IconUserCircle,
+} from "@tabler/icons-react";
+
 import { logoutModal } from "./LogoutModal";
 
 export function User({ username }: { username: string }) {

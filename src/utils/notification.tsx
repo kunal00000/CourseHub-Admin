@@ -1,5 +1,5 @@
-import { IconCheck, IconX } from "@tabler/icons-react";
 import { notifications } from "@mantine/notifications";
+import { IconCheck, IconX } from "@tabler/icons-react";
 
 export const ErrorNotification = (message: string) => {
   notifications.show({

@@ -1,15 +1,16 @@
 import {
-  Card,
-  TextInput,
-  Text,
   Button,
-  NumberInput,
+  Card,
   Group,
+  NumberInput,
   Select,
+  Text,
+  TextInput,
   Textarea,
 } from "@mantine/core";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import { useCoursePostMutation } from "../../hooks/useCourse";
 
 function CreateCourse() {
