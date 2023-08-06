@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  build:
+  typecheck:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
